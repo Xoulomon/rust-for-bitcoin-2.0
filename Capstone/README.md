@@ -177,8 +177,9 @@ waiting for a human — every human decision is a `quote_*` / `confirm_*` pair.
 `wallet-cli` exists to prove that: anything it could not do without reaching
 past the facade would be a leak.
 
-[`docs/architecture.md`](docs/architecture.md) has the layer diagram and
-sequence diagrams for send and payjoin receive.
+[`docs/architecture.md`](docs/architecture.md) has the layer diagram (also
+exported to [`docs/architecture.svg`](docs/architecture.svg)) and sequence
+diagrams for send and payjoin receive.
 
 ---
 

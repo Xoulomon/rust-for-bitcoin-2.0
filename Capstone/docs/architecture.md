@@ -197,9 +197,18 @@ backlog can never starve an interactive `/send`.
 
 ## Exporting the SVG
 
-The diagrams above render on GitHub as-is. For a standalone
-`docs/architecture.svg`:
+The diagrams above render on GitHub as-is. The layer diagram is also exported
+to [`architecture.svg`](architecture.svg) for contexts that cannot render
+Mermaid — a slide, a printed report. Its source is kept beside it in
+`architecture.mmd` so the export can be regenerated rather than being a binary
+nobody can reproduce:
 
 ```bash
-npx -y @mermaid-js/mermaid-cli -i docs/architecture.md -o docs/architecture.svg
+npx -y @mermaid-js/mermaid-cli \
+  -i docs/architecture.mmd \
+  -o docs/architecture.svg \
+  --backgroundColor transparent
 ```
+
+The two sequence diagrams are not exported: they are long and narrow, and read
+better scrolled in Markdown than scaled to a page.
